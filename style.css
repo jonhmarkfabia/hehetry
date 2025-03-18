@@ -1,0 +1,364 @@
+/* Reset and Base Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background-color: #4a148c;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: large;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 20px;
+}
+
+header nav a {
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #6a1b9a;
+    text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+    width: 95%; /* Adjust for phone screens */
+    max-width: 1200px; /* Limit width on larger screens */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a148c;
+}
+
+/* Hero Section (index.html) */
+/* ... (previous styles) ... */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url('hero-bg.jpghttps://i.pinimg.com/originals/cf/a5/6b/cfa56b3e749288d1be0e67d5998d89c6.gif'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 8px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Style for the GIF */
+.hero-gif {
+    max-width: 300px; /* Adjust size as needed */
+    margin-bottom: 20px; /* Add spacing below the GIF */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+.food-with-love {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.food-content {
+    max-width: 400px;
+    padding: 20px;
+}
+
+.food-content h2 {
+    color: #4a148c;
+    margin-bottom: 20px;
+}
+
+.food-content p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-us-button {
+    background-color: #4a148c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.about-us-button:hover {
+    background-color: #6a1b9a;
+}
+
+.food-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px;
+    max-width: 600px;
+    margin-left: 30px; /* Add some space between content and images */
+}
+
+.food-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .food-with-love {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .food-images {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+/* ... (rest of your CSS) ... */
+/* Search Bar (index.html, caterers.html, reservations.html) */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column; /* Stack on small screens */
+}
+
+.search-bar input[type="text"] {
+    padding: 12px 15px;
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 400px; /* Limit width on larger screens */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 10px; /* Add space between input and button */
+}
+
+.search-bar button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Featured Restaurants, Caterers, Reservations Grids */
+.restaurant-grid, .caterer-grid, .reservation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.restaurant-card, .caterer-card, .reservation-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-card img, .caterer-card img, .reservation-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.restaurant-card h3, .caterer-card h3, .reservation-card h3 {
+    margin-bottom: 10px;
+    color: #4a148c;
+}
+
+.restaurant-card p, .caterer-card p {
+    margin-bottom: 15px;
+}
+
+.restaurant-card button, .caterer-card button, .reservation-card button {
+    padding: 10px 20px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.restaurant-card button:hover, .caterer-card button:hover, .reservation-card button:hover {
+    background-color: #6a1b9a;
+}
+
+/* About, Login, and Signup Forms */
+.about-content, .login-form, .signup-form {
+    max-width: 90%; /* Adjust for phone screens */
+    margin: 30px auto;
+    text-align: center;
+}
+
+.login-form form, .signup-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input, .signup-form input {
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-form button, .signup-form button {
+    padding: 12px 25px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover, .signup-form button:hover {
+    background-color: #6a1b9a;
+}
+
+.login-form p, .signup-form p {
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    header nav li {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+
+    main {
+        width: 95%; /* Full width on smaller screens */
+    }
+}
+/* ... (previous CSS rules) ... */
+
+footer {
+    background-color: #f0f0f0; /* Light background for the footer */
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #ddd; /* Optional: Add a top border */
+}
+/* ... (previous CSS rules) ... */
+
+#featured-restaurants {
+    /* Add a subtle fade-in effect */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#featured-restaurants.loaded {
+    opacity: 1;
+}
+
+body {
+    /* Smooth scroll behavior for the entire page */
+    scroll-behavior: smooth;
+}
